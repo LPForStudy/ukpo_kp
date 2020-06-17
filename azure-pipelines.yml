@@ -1,11 +1,3 @@
-# Universal Windows Platform
-- task: VSBuild@1
-  inputs:
-    solution: '**\*.sln'
-# Build a Universal Windows Platform project using Visual Studio.
-# Add steps that test and distribute an app, save build artifacts, and more:
-# https://aka.ms/yaml
-
 trigger:
 - master
 
@@ -27,7 +19,4 @@ steps:
 
 - task: VSBuild@1
   inputs:
-    platform: 'x86'
-    solution: '$(solution)'
-    configuration: '$(buildConfiguration)'
-    msbuildArgs: '/p:AppxBundlePlatforms="$(buildPlatform)" /p:AppxPackageDir="$(appxPackageDir)" /p:AppxBundle=Always /p:UapAppxPackageBuildMode=StoreUpload'
+    solution: '**\*.sln'
