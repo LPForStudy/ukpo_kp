@@ -21,10 +21,9 @@ steps:
   inputs:
     solution: '**\*.sln'
 
-- task: DotNetCoreCLI@2
-  displayName: 'Run unit tests - $(buildConfiguration)'
+- task: CmdLine@2
   inputs:
-    command: 'test'
-    arguments: '--no-build --configuration $(buildConfiguration)'
-    publishTestResults: true
-    projects: '**/*.vcxproj'
+    script: |
+      cd tests\Debug
+      
+      .\tests.exe
