@@ -1145,3 +1145,111 @@ TEST(Triangle, Test_together) {
 	EXPECT_EQ(size(intersection_contour.vertices_), 3);
 
 }
+TEST(Triangle, Testsix) {
+	T_point a1, a2, b1, b2, c1, c2;
+	a1.point_val_.real(6);
+	a1.point_val_.imag(3);
+
+	b1.point_val_.real(1);
+	b1.point_val_.imag(3);
+
+	c1.point_val_.real(3);
+	c1.point_val_.imag(-1);
+
+	a2.point_val_.real(3);
+	a2.point_val_.imag(4);
+
+	b2.point_val_.real(1);
+	b2.point_val_.imag(1);
+
+	c2.point_val_.real(6);
+	c2.point_val_.imag(1);
+
+	T_triangle  triangle_1(a1, b1, c1);
+	T_triangle  triangle_2(a2, b2, c2);
+
+
+	T_intersection_contour  intersection_contour
+	(
+		triangle_1,
+		triangle_2
+	);
+
+	intersection_contour.fill_vertices();
+	//intersection_contour.print_vertices     ();
+
+	EXPECT_EQ(size(intersection_contour.vertices_), 6);
+
+}
+TEST(Triangle, Testcheckåtriangle_onepoint) {
+	T_point a1, a2, b1, b2, c1, c2;
+	a1.point_val_.real(6);
+	a1.point_val_.imag(3);
+
+	b1.point_val_.real(1);
+	b1.point_val_.imag(3);
+
+	c1.point_val_.real(6);
+	c1.point_val_.imag(3);
+
+	a2.point_val_.real(6);
+	a2.point_val_.imag(1);
+
+	b2.point_val_.real(3);
+	b2.point_val_.imag(4);
+
+	c2.point_val_.real(6);
+	c2.point_val_.imag(1);
+
+	T_triangle  triangle_1(a1, b1, c1);
+	T_triangle  triangle_2(a2, b2, c2);
+
+
+	T_intersection_contour  intersection_contour
+	(
+		triangle_1,
+		triangle_2
+	);
+
+	intersection_contour.fill_vertices();
+	//intersection_contour.print_vertices     ();
+
+	EXPECT_EQ(size(intersection_contour.vertices_), 1);
+
+}
+TEST(Triangle, Testcheckåtriangle_zeropoint) {
+	T_point a1, a2, b1, b2, c1, c2;
+	a1.point_val_.real(6);
+	a1.point_val_.imag(3);
+
+	b1.point_val_.real(1);
+	b1.point_val_.imag(3);
+
+	c1.point_val_.real(6);
+	c1.point_val_.imag(3);
+
+	a2.point_val_.real(6);
+	a2.point_val_.imag(1);
+
+	b2.point_val_.real(1);
+	b2.point_val_.imag(1);
+
+	c2.point_val_.real(6);
+	c2.point_val_.imag(1);
+
+	T_triangle  triangle_1(a1, b1, c1);
+	T_triangle  triangle_2(a2, b2, c2);
+
+
+	T_intersection_contour  intersection_contour
+	(
+		triangle_1,
+		triangle_2
+	);
+
+	intersection_contour.fill_vertices();
+	//intersection_contour.print_vertices     ();
+
+	EXPECT_EQ(size(intersection_contour.vertices_), 0);
+
+}
