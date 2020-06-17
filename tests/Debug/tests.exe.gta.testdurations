@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GtaTestDurations xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Executable>F:\shared\ukpo_kp\tests\Debug\tests.exe</Executable>
+  <TestDurations>
+    <TestDuration Test="Triangle.Testthree" Duration="1" />
+    <TestDuration Test="Triangle.Testfive" Duration="1" />
+    <TestDuration Test="Triangle.Testfour" Duration="1" />
+    <TestDuration Test="Triangle.Testtwo" Duration="1" />
+    <TestDuration Test="Triangle.Testone" Duration="1" />
+    <TestDuration Test="Triangle.Test_together" Duration="1" />
+    <TestDuration Test="Triangle.Testsix" Duration="1" />
+    <TestDuration Test="Triangle.Testcheckеtriangle_onepoint" Duration="1" />
+    <TestDuration Test="Triangle.Testcheckеtriangle_zeropoint" Duration="1" />
+  </TestDurations>
+</GtaTestDurations>
